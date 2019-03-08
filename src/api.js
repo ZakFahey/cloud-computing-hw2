@@ -9,7 +9,7 @@ const server = Hapi.server({
 
 server.route({
     method: 'GET',
-    path: '/historical',
+    path: '/historical/',
     handler: function (request, h) {
         const dates = Weather.getAllDates();
         return h.response(dates);
@@ -30,10 +30,10 @@ server.route({
 
 server.route({
     method: 'POST',
-    path: '/historical',
+    path: '/historical/',
     handler: function (request, h) {
-        Weather.addOrUpdateRecord(request.payload.record);
-        const returnVal = { DATE: request.payload.record.DATE };
+        Weather.addOrUpdateRecord(request.payload);
+        const returnVal = { DATE: request.payload.DATE };
         return h.response(returnVal).code(201);
     }
 });
