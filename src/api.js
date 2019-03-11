@@ -8,7 +8,10 @@ const Joi = require('joi');
 async function start() {
     const server = Hapi.server({
         host: 'localhost',
-        port: 8000
+        port: 8000,
+        routes: {
+            cors: true
+        }
     });
 
 
