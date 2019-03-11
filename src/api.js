@@ -59,7 +59,7 @@ async function start() {
         handler: function (request, h) {
             const record = Weather.getRecord(request.params.date);
             if (record === null) {
-                return h.response().code(404);
+                return h.response('Record not found / invalid date format').code(404);
             }
             return h.response(record);
         }
@@ -109,7 +109,7 @@ async function start() {
         handler: function (request, h) {
             const record = Weather.deleteRecord(request.params.date);
             if (record === null) {
-                return h.response().code(404);
+                return h.response('Record not found / invalid date format').code(404);
             }
             return h.response(record);
         }
@@ -132,7 +132,7 @@ async function start() {
         handler: function (request, h) {
             const record = Weather.getForecast(request.params.date);
             if (record === null) {
-                return h.response("Date out of range").code(400);
+                return h.response('Date out of range / invalid date format').code(400);
             }
             return h.response(record);
         }
