@@ -30,6 +30,7 @@ async function start() {
         method: 'GET',
         path: '/historical/',
         options: {
+            description: 'Gets all the dates with recorded temperatures',
             tags: ['api']
         },
         handler: function (request, h) {
@@ -42,6 +43,7 @@ async function start() {
         method: 'GET',
         path: '/historical/{date}',
         options: {
+            description: 'Gets the high and low temperatures for the given date',
             tags: ['api'],
             validate: {
                 params: {
@@ -64,6 +66,7 @@ async function start() {
         method: 'POST',
         path: '/historical/',
         options: {
+            description: 'Adds or updates the temperature values for the given date',
             tags: ['api'],
             validate: {
                 payload: {
@@ -90,6 +93,7 @@ async function start() {
         method: 'DELETE',
         path: '/historical/{date}',
         options: {
+            description: 'Deletes the entry for the given date',
             tags: ['api'],
             validate: {
                 params: {
@@ -112,6 +116,7 @@ async function start() {
         method: 'GET',
         path: '/forecast/{date}',
         options: {
+            description: 'Gives the predicted weather of the next seven days starting from the given date',
             tags: ['api'],
             validate: {
                 params: {
