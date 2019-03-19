@@ -12,6 +12,8 @@ HTTP web service for weather forecasts. Includes these routes:
 
 `(GET) /forecast/{date}` - Gives the predicted weather of the next seven days starting from the given date
 
+`(GET) /forecast/external` - Gives the predicted weather of the next seven days starting from the current date using the openweathermap.org API. Used for the extra credit in HW3.
+
 `(GET) /documentation` - Shows the Swagger documentation page
 
 ## Installation
