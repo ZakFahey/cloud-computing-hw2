@@ -6,9 +6,9 @@ HTTP web service for weather forecasts. Includes these routes:
 
 `(GET) /historical/{date}` - Gets the high and low temperatures for the given date
 
-`(POST) /historical/` - Adds or updates the temperature values for the given date
+`(POST) /historical/` - Adds or updates the temperature values for the given date. Returns the date.
 
-`(DELETE) /historical/{date}` - Deletes the entry for the given date
+`(DELETE) /historical/{date}` - Deletes the entry for the given date. Returns the entry.
 
 `(GET) /forecast/{date}` - Gives the predicted weather of the next seven days starting from the given date
 
