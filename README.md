@@ -20,7 +20,8 @@ HTTP web service for weather forecasts. Includes these routes:
 
 1. This project is written in [Node.js](https://nodejs.org/en/). In order to run it, you must install Node.
 2. Pull the repository and run the command `npm install` to update the dependencies.
-3. Run the command `npm start` to start the server.
+3. Register an account with openweathermap.org to get an API key.
+4. Run the command `API_KEY=<your key> npm start` to start the server.
 
 ## Dependencies
 
